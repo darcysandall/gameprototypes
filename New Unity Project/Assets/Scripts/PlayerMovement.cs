@@ -1,17 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Movement))]
 public class PlayerMovement : MonoBehaviour
 {
+    public int PlayerID = 1;
     // Movement
-    public float _acceleration = 10f;
-    public float _deceleration = 2f;
-    public float _maxSpeed = 8f;
+    public float Acceleration = 10f;
+    public float Deceleration = 2f;
+    public float MaxSpeed = 8f;
 
     // Jumping
-    public Vector3 _jumpForce = new Vector3(0, 50, 0);
-    public Collider _jumpCollider;
+    public Vector3 JumpForce = new Vector3(0, 50, 0);
+    public Collider JumpCollider;
 
     private Quaternion _screenSpace;
     private Vector3 _direction, _moveDirection, _screenForward, _screenRight;
@@ -31,19 +33,19 @@ public class PlayerMovement : MonoBehaviour
         _screenForward = _screenSpace * Vector3.forward;
         _screenRight = _screenSpace * Vector3.right;
 
-        var horizontal = Input.GetAxisRaw("Horizontal");
-        var vertical = Input.GetAxisRaw("Vertical");
+        var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal"));
+        var vertical = Input.GetAxisRaw(ConvertControl("Vertical"));
 
         _direction = (_screenForward * vertical) + (_screenRight * horizontal);
         _moveDirection = transform.position + _direction;
 
-        if (Input.GetButtonDown("Jump") && IsGrounded()) Jump(_jumpForce);
+        if (Input.GetButtonDown(ConvertControl("Jump")) && IsGrounded()) Jump(JumpForce);
     }
 
     void FixedUpdate()
     {
-        _movement.MoveTo(_moveDirection, _acceleration);
-        _movement.ManageSpeed(_deceleration, _maxSpeed);
+        _movement.MoveTo(_moveDirection, Acceleration);
+        _movement.ManageSpeed(Deceleration, MaxSpeed);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -80,5 +82,10 @@ public class PlayerMovement : MonoBehaviour
         var velocity = _movement.Rigidbody.velocity;
         _movement.Rigidbody.velocity = new Vector3(velocity.x, 0, velocity.z);
         _movement.Rigidbody.AddRelativeForce(jumpVelocity, ForceMode.Impulse);
+    }
+
+    private string ConvertControl(string control)
+    {
+        return String.Format("{0}{1}", control, PlayerID);
     }
 }

@@ -4,10 +4,11 @@ using System.Collections;
 [RequireComponent(typeof(Movement))]
 public class SwarmMovement : MonoBehaviour
 {
-    public GameObject _player;
-    public float _acceleration = 40;
-    public float _deceleration = 9;
-    public float _maxSpeed = 10;
+    public GameObject Player;
+    public float Acceleration = 40;
+    public float Deceleration = 9;
+    public float MaxSpeed = 10;
+    public WatchPlayer WatchPlayer;
 
     private Movement _movement;
 
@@ -18,11 +19,18 @@ public class SwarmMovement : MonoBehaviour
 	
 	void Update ()
     {
-        _movement.MoveTo(_player.transform.position, _acceleration);
+	    if (WatchPlayer && WatchPlayer.PlayerTransform())
+	    {
+            _movement.MoveTo(WatchPlayer.PlayerTransform().position, Acceleration, 1);
+        }
+	    else if (Player)
+	    {
+            _movement.MoveTo(Player.transform.position, Acceleration, 1);
+        }
     }
 
     void FixedUpdate()
     {
-        _movement.ManageSpeed(_deceleration, _maxSpeed);
+        _movement.ManageSpeed(Deceleration, MaxSpeed);
     }
 }

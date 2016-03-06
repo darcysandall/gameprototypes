@@ -129,10 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &4691684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,10 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &42154861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,10 +369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &276813288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,10 +489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &401553184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,10 +609,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &626685032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,10 +804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &669551898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,10 +985,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &732122137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,10 +1105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &757638971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,6 +1181,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757638968}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &792006577
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1661142561}
+    m_Modifications:
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -92
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 107.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181208, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: m_Name
+      value: Swarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406638, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1826942314}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &871433424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,10 +1275,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &871433427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,125 +1351,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871433424}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &890289182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 890289189}
-  - 33: {fileID: 890289188}
-  - 135: {fileID: 890289187}
-  - 23: {fileID: 890289186}
-  - 54: {fileID: 890289185}
-  - 114: {fileID: 890289184}
-  - 114: {fileID: 890289183}
-  m_Layer: 0
-  m_Name: Swarm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &890289183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
---- !u!114 &890289184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53e33e9eab818084dae0f7f5a2c2d4d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &890289185
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  serializedVersion: 2
-  m_Mass: 0.1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!23 &890289186
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 6a1a24425f874394d8f1c7caa43172c5, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!135 &890289187
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &890289188
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &890289189
+--- !u!4 &890289189 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 890289182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -92, y: 0, z: 107.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1661142561}
-  m_RootOrder: 0
+  m_PrefabParentObject: {fileID: 497188, guid: 9e2c991a998a936439f1efbff2dd392c, type: 2}
+  m_PrefabInternal: {fileID: 792006577}
 --- !u!1 &914010527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,10 +1399,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &914010530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,10 +1519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1030101108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1693,10 +1639,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1180827250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1812,10 +1759,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1295221625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,10 +1879,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1305648010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,10 +1999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1357632406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,10 +2119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1435174218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2288,10 +2239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1452384575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,10 +2359,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1573427823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2592,7 +2545,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1661142561}
   m_Layer: 0
-  m_Name: Swarms
+  m_Name: Red Swarms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2637,7 +2590,7 @@ Transform:
   - {fileID: 4691682}
   - {fileID: 1357632404}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1681842663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,10 +2635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1681842666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,10 +2755,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1771200797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2831,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771200794}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1821761258
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 135172, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: m_Name
+      value: YSwarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464116, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+      propertyPath: Acceleration
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1826942314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,7 +2897,7 @@ GameObject:
   - 114: {fileID: 1826942321}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2972,7 +2977,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1826942314}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2991,11 +2996,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceleration: 50
-  _deceleration: 7
-  _maxSpeed: 8
-  _jumpForce: {x: 0, y: 30, z: 0}
-  _jumpCollider: {fileID: 0}
+  PlayerID: 1
+  Acceleration: 13
+  Deceleration: 2
+  MaxSpeed: 8
+  JumpForce: {x: 0, y: 25, z: 0}
+  JumpCollider: {fileID: 0}
 --- !u!1 &1836972218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,10 +3046,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1836972221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3159,10 +3166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1910181883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3234,6 +3242,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910181880}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1916940576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1916940577}
+  m_Layer: 0
+  m_Name: Yellow Swarms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916940577
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916940576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.5235, y: 1.78, z: 58.6265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1951528383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,10 +3313,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1951528386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,10 +3433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1955365061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3516,10 +3553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1962873990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3635,10 +3673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &1986755555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3754,10 +3793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b14c05a120eb694199b6a0903b7f842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1826942314}
-  _acceleration: 40
-  _deceleration: 9
-  _maxSpeed: 10
+  Player: {fileID: 0}
+  Acceleration: 40
+  Deceleration: 9
+  MaxSpeed: 10
+  WatchPlayer: {fileID: 0}
 --- !u!114 &2013703357
 MonoBehaviour:
   m_ObjectHideFlags: 0
