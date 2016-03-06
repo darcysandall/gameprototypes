@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded()
-    { 
+    {
         return _grounded;
     }
 

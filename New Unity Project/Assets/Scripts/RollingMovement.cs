@@ -16,9 +16,10 @@ public class RollingMovement : MonoBehaviour
 
     void Update()
     {
+        // If the controller is getting horiontal input then move the player
         if (Input.GetAxisRaw(ConvertControl("Horizontal")) != 0)
         {
-            var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal"))*Force;
+            var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal")) * Force;
             _movement.Rigidbody.AddRelativeForce(horizontal, 0, 0, ForceMode.Impulse);
         }
     }
