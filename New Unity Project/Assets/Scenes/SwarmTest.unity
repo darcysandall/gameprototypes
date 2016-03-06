@@ -3797,9 +3797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4cdcb871fd65e4cb6dffb00ad61edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 1826942319}
-  _targetOffset: {x: 0, y: 3.5, z: 7}
-  _rotateDamping: 20
+  Target: {fileID: 1826942319}
+  TargetOffset: {x: 0, y: 3.5, z: 7}
+  RotateDamping: 100
 --- !u!4 &1621786031 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423706, guid: e357424aefc27764699dbc970ed62cc2, type: 2}
@@ -4296,7 +4296,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1826942314}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6c819dbe510703349b7ca8fdb771e54e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4347,8 +4347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerID: 1
-  Acceleration: 13
+  PlayerId: 1
+  Acceleration: 10
   Deceleration: 2
   MaxSpeed: 8
   JumpForce: {x: 0, y: 30, z: 0}
