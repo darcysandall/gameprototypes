@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Movement))]
 public class PlayerMovement : MonoBehaviour
 {
-    public int PlayerID = 1;
+    public int PlayerId = 1;
     // Movement
     public float Acceleration = 10f;
     public float Deceleration = 2f;
@@ -86,6 +86,6 @@ public class PlayerMovement : MonoBehaviour
 
     private string ConvertControl(string control)
     {
-        return String.Format("{0}{1}", control, PlayerID);
+        return String.Format("{0}{1}", control, PlayerId);
     }
 }
