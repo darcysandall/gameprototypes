@@ -33,13 +33,13 @@ public class PlayerMovement : MonoBehaviour
         _screenForward = _screenSpace * Vector3.forward;
         _screenRight = _screenSpace * Vector3.right;
 
-        var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal"));
-        var vertical = Input.GetAxisRaw(ConvertControl("Vertical"));
+        var horizontal = Input.GetAxisRaw(("Horizontal1"));
+        var vertical = Input.GetAxisRaw(("Vertical1"));
 
         _direction = (_screenForward * vertical) + (_screenRight * horizontal);
         _moveDirection = transform.position + _direction;
 
-        if (Input.GetButtonDown(ConvertControl("Jump")) && IsGrounded()) Jump(JumpForce);
+        if (Input.GetButtonDown(("Jump1")) && IsGrounded()) Jump(JumpForce);
     }
 
     void FixedUpdate()
