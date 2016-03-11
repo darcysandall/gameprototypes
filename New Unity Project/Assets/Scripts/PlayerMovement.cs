@@ -20,11 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private Movement _movement;
     private Transform _mainCamera;
     private bool _grounded = false;
+    private ControllerMap _controller;
 
     void Start()
     {
-        _movement = GetComponent<Movement>();
+        ControllerManager.Controllers.AddController(PlayerId);
+        _controller = ControllerManager.Controllers.GetController(PlayerId);
         _mainCamera = Camera.main.transform;
+        _movement = GetComponent<Movement>();
     }
 
     void Update()
@@ -33,13 +36,17 @@ public class PlayerMovement : MonoBehaviour
         _screenForward = _screenSpace * Vector3.forward;
         _screenRight = _screenSpace * Vector3.right;
 
-        var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal"));
-        var vertical = Input.GetAxisRaw(ConvertControl("Vertical"));
+        var horizontal = _controller.XAxis;
+        var vertical = _controller.YAxis;
 
         _direction = (_screenForward * vertical) + (_screenRight * horizontal);
         _moveDirection = transform.position + _direction;
 
-        if (Input.GetButtonDown(ConvertControl("Jump")) && IsGrounded()) Jump(JumpForce);
+        if (_controller.GetButtonDown(ControllerMap.Button.GamepadBottom) &&
+            IsGrounded())
+        {
+            Jump(JumpForce);
+        }
     }
 
     void FixedUpdate()

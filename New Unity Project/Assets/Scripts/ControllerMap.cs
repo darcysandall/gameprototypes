@@ -13,8 +13,8 @@ public class ControllerMap
     private readonly KeyCode _gamepadRight;
     private readonly KeyCode _gamepadLeft;
     private readonly KeyCode _gamepadTop;
-    private readonly KeyCode _leftTrigger;
-    private readonly KeyCode _rightTrigger;
+    private readonly KeyCode _leftBumper;
+    private readonly KeyCode _rightBumper;
     private readonly KeyCode _start;
     private readonly KeyCode _options;
 
@@ -24,8 +24,8 @@ public class ControllerMap
         GamepadRight,
         GamepadTop,
         GamepadBottom,
-        LeftTrigger,
-        RightTrigger,
+        LeftBumper,
+        RightBumper,
         Start,
         Options
     }
@@ -47,8 +47,8 @@ public class ControllerMap
                 _gamepadRight = KeyCode.Joystick1Button1;
                 _gamepadLeft = KeyCode.Joystick1Button2;
                 _gamepadTop = KeyCode.Joystick1Button3;
-                _leftTrigger = KeyCode.Joystick1Button4;
-                _rightTrigger = KeyCode.Joystick1Button5;
+                _leftBumper = KeyCode.Joystick1Button4;
+                _rightBumper = KeyCode.Joystick1Button5;
                 _options = KeyCode.Joystick1Button6;
                 _start = KeyCode.Joystick1Button7;
                 break;
@@ -57,8 +57,8 @@ public class ControllerMap
                 _gamepadRight = KeyCode.Joystick2Button1;
                 _gamepadLeft = KeyCode.Joystick2Button2;
                 _gamepadTop = KeyCode.Joystick2Button3;
-                _leftTrigger = KeyCode.Joystick2Button4;
-                _rightTrigger = KeyCode.Joystick2Button5;
+                _leftBumper = KeyCode.Joystick2Button4;
+                _rightBumper = KeyCode.Joystick2Button5;
                 _options = KeyCode.Joystick2Button6;
                 _start = KeyCode.Joystick2Button7;
                 break;
@@ -67,8 +67,8 @@ public class ControllerMap
                 _gamepadRight = KeyCode.Joystick3Button1;
                 _gamepadLeft = KeyCode.Joystick3Button2;
                 _gamepadTop = KeyCode.Joystick3Button3;
-                _leftTrigger = KeyCode.Joystick3Button4;
-                _rightTrigger = KeyCode.Joystick3Button5;
+                _leftBumper = KeyCode.Joystick3Button4;
+                _rightBumper = KeyCode.Joystick3Button5;
                 _options = KeyCode.Joystick3Button6;
                 _start = KeyCode.Joystick3Button7;
                 break;
@@ -77,8 +77,8 @@ public class ControllerMap
                 _gamepadRight = KeyCode.Joystick4Button1;
                 _gamepadLeft = KeyCode.Joystick4Button2;
                 _gamepadTop = KeyCode.Joystick4Button3;
-                _leftTrigger = KeyCode.Joystick4Button4;
-                _rightTrigger = KeyCode.Joystick4Button5;
+                _leftBumper = KeyCode.Joystick4Button4;
+                _rightBumper = KeyCode.Joystick4Button5;
                 _options = KeyCode.Joystick4Button6;
                 _start = KeyCode.Joystick4Button7;
                 break;
@@ -95,7 +95,17 @@ public class ControllerMap
 
     public float YAxis
     {
-        get { return Input.GetAxisRaw("Horizontal" + _playerId); }
+        get { return Input.GetAxisRaw("Vertical" + _playerId); }
+    }
+
+    public float LeftTrigger
+    {
+        get { return Input.GetAxisRaw("LeftTrigger" + _playerId); }
+    }
+
+    public float RightTrigger
+    {
+        get { return Input.GetAxisRaw("RightTrigger" + _playerId); }
     }
 
     /// <summary>
@@ -107,14 +117,14 @@ public class ControllerMap
     {
         switch (button)
         {
-            case Button.GamepadBottom: return Input.GetButton(_gamepadBottom.ToString());
-            case Button.GamepadTop: return Input.GetButton(_gamepadTop.ToString());
-            case Button.GamepadLeft: return Input.GetButton(_gamepadLeft.ToString());
-            case Button.GamepadRight: return Input.GetButton(_gamepadRight.ToString());
-            case Button.LeftTrigger: return Input.GetButton(_leftTrigger.ToString());
-            case Button.RightTrigger: return Input.GetButton(_rightTrigger.ToString());
-            case Button.Start: return Input.GetButton(_start.ToString());
-            case Button.Options: return Input.GetButton(_options.ToString());
+            case Button.GamepadBottom: return Input.GetKey(_gamepadBottom);
+            case Button.GamepadTop: return Input.GetKey(_gamepadTop);
+            case Button.GamepadLeft: return Input.GetKey(_gamepadLeft);
+            case Button.GamepadRight: return Input.GetKey(_gamepadRight);
+            case Button.LeftBumper: return Input.GetKey(_leftBumper);
+            case Button.RightBumper: return Input.GetKey(_rightBumper);
+            case Button.Start: return Input.GetKey(_start);
+            case Button.Options: return Input.GetKey(_options);
             default: return false;
         }
     }
@@ -128,14 +138,14 @@ public class ControllerMap
     {
         switch (button)
         {
-            case Button.GamepadBottom: return Input.GetButtonDown(_gamepadBottom.ToString());
-            case Button.GamepadTop: return Input.GetButtonDown(_gamepadTop.ToString());
-            case Button.GamepadLeft: return Input.GetButtonDown(_gamepadLeft.ToString());
-            case Button.GamepadRight: return Input.GetButtonDown(_gamepadRight.ToString());
-            case Button.LeftTrigger: return Input.GetButtonDown(_leftTrigger.ToString());
-            case Button.RightTrigger: return Input.GetButtonDown(_rightTrigger.ToString());
-            case Button.Start: return Input.GetButtonDown(_start.ToString());
-            case Button.Options: return Input.GetButtonDown(_options.ToString());
+            case Button.GamepadBottom: return Input.GetKeyDown(_gamepadBottom);
+            case Button.GamepadTop: return Input.GetKeyDown(_gamepadTop);
+            case Button.GamepadLeft: return Input.GetKeyDown(_gamepadLeft);
+            case Button.GamepadRight: return Input.GetKeyDown(_gamepadRight);
+            case Button.LeftBumper: return Input.GetKeyDown(_leftBumper);
+            case Button.RightBumper: return Input.GetKeyDown(_rightBumper);
+            case Button.Start: return Input.GetKeyDown(_start);
+            case Button.Options: return Input.GetKeyDown(_options);
             default: return false;
         }
     }
@@ -149,14 +159,14 @@ public class ControllerMap
     {
         switch (button)
         {
-            case Button.GamepadBottom: return Input.GetButtonUp(_gamepadBottom.ToString());
-            case Button.GamepadTop: return Input.GetButtonUp(_gamepadTop.ToString());
-            case Button.GamepadLeft: return Input.GetButtonUp(_gamepadLeft.ToString());
-            case Button.GamepadRight: return Input.GetButtonUp(_gamepadRight.ToString());
-            case Button.LeftTrigger: return Input.GetButtonUp(_leftTrigger.ToString());
-            case Button.RightTrigger: return Input.GetButtonUp(_rightTrigger.ToString());
-            case Button.Start: return Input.GetButtonUp(_start.ToString());
-            case Button.Options: return Input.GetButtonUp(_options.ToString());
+            case Button.GamepadBottom: return Input.GetKeyUp(_gamepadBottom);
+            case Button.GamepadTop: return Input.GetKeyUp(_gamepadTop);
+            case Button.GamepadLeft: return Input.GetKeyUp(_gamepadLeft);
+            case Button.GamepadRight: return Input.GetKeyUp(_gamepadRight);
+            case Button.LeftBumper: return Input.GetKeyUp(_leftBumper);
+            case Button.RightBumper: return Input.GetKeyUp(_rightBumper);
+            case Button.Start: return Input.GetKeyUp(_start);
+            case Button.Options: return Input.GetKeyUp(_options);
             default: return false;
         }
     }
