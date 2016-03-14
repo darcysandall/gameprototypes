@@ -31,7 +31,7 @@ public class ControllerMap
     }
 
     /// <summary>
-    /// Constructs a ControllerMap
+    /// Constructs a ControllerMap.
     /// 
     /// Sets all of the KeyCodes accoring to the player ID that the controller represents.
     /// </summary>
@@ -121,7 +121,7 @@ public class ControllerMap
     }
 
     /// <summary>
-    /// Returns true if the button is held down.
+    /// Checks if the given button is held down.
     /// </summary>
     /// <param name="button">The button to check.</param>
     /// <returns>True if the button was pressed, false if not.</returns>
@@ -142,7 +142,7 @@ public class ControllerMap
     }
 
     /// <summary>
-    /// Returns true if the button was pressed in this frame.
+    /// Checks if the given button was pressed in this frame.
     /// </summary>
     /// <param name="button">The button to check.</param>
     /// <returns>True is the button was pressed in this frame, false if not.</returns>
@@ -163,7 +163,7 @@ public class ControllerMap
     }
 
     /// <summary>
-    /// Return true if the button was released in this frame.
+    /// Checks if the given button was released in this frame.
     /// </summary>
     /// <param name="button">The button to check</param>
     /// <returns>True if the button was released, false if not.</returns>
@@ -181,5 +181,17 @@ public class ControllerMap
             case Button.Options: return Input.GetKeyUp(_options);
             default: return false;
         }
+    }
+
+    /// <summary>
+    /// Checks if any button has been pressed.
+    /// </summary>
+    /// <returns>True if a button was pressed. Otherwise false. </returns>
+    public virtual bool AnyButtonPressed()
+    {
+        return Input.GetKeyDown(_gamepadBottom) || Input.GetKeyDown(_gamepadTop)
+            || Input.GetKeyDown(_gamepadLeft) || Input.GetKeyDown(_gamepadRight)
+            || Input.GetKeyDown(_leftBumper) || Input.GetKeyDown(_rightBumper)
+            || Input.GetKeyDown(_start) || Input.GetKeyDown(_options);
     }
 }
