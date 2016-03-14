@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Class ControllerMap.
+/// Class KeyboardMap.
 /// 
-/// Receives input from a particular contoller for a specified player.
-/// This class hides the unity default names for controller buttons and provides more easily understood names.
+/// Provides backup keyboard input.
 /// </summary>
-public class ControllerMap
+public class KeyboardMap : ControllerMap
 {
-    private readonly int _playerId;
     private readonly KeyCode _gamepadBottom;
     private readonly KeyCode _gamepadRight;
     private readonly KeyCode _gamepadLeft;
@@ -17,70 +15,76 @@ public class ControllerMap
     private readonly KeyCode _rightBumper;
     private readonly KeyCode _start;
     private readonly KeyCode _options;
-
-    public enum Button
-    {
-        GamepadLeft,
-        GamepadRight,
-        GamepadTop,
-        GamepadBottom,
-        LeftBumper,
-        RightBumper,
-        Start,
-        Options
-    }
+    private readonly KeyCode _left;
+    private readonly KeyCode _right;
+    private readonly KeyCode _up;
+    private readonly KeyCode _down;
 
     /// <summary>
     /// Constructs a ControllerMap
     /// 
-    /// Sets all of the KeyCodes accoring to the player ID that the controller represents.
+    /// Sets all of the KeyCodes accoring to the player ID for the backup keyboard codes.
     /// </summary>
     /// <param name="playerId">The player ID from 1 to 4.</param>
-    public ControllerMap(int playerId)
+    public KeyboardMap(int playerId) : base(playerId)
     {
-        _playerId = playerId;
-
         switch (playerId)
         {
             case 1:
-                _gamepadBottom = KeyCode.Joystick1Button0;
-                _gamepadRight = KeyCode.Joystick1Button1;
-                _gamepadLeft = KeyCode.Joystick1Button2;
-                _gamepadTop = KeyCode.Joystick1Button3;
-                _leftBumper = KeyCode.Joystick1Button4;
-                _rightBumper = KeyCode.Joystick1Button5;
-                _options = KeyCode.Joystick1Button6;
-                _start = KeyCode.Joystick1Button7;
+                _gamepadBottom = KeyCode.Space;
+                _gamepadRight = KeyCode.Q;
+                _gamepadLeft = KeyCode.E;
+                _gamepadTop = KeyCode.Z;
+                _leftBumper = KeyCode.X;
+                _rightBumper = KeyCode.C;
+                _options = KeyCode.Alpha1;
+                _start = KeyCode.Alpha2;
+                _left = KeyCode.A;
+                _right = KeyCode.D;
+                _up = KeyCode.W;
+                _down = KeyCode.S;
                 break;
             case 2:
-                _gamepadBottom = KeyCode.Joystick2Button0;
-                _gamepadRight = KeyCode.Joystick2Button1;
-                _gamepadLeft = KeyCode.Joystick2Button2;
-                _gamepadTop = KeyCode.Joystick2Button3;
-                _leftBumper = KeyCode.Joystick2Button4;
-                _rightBumper = KeyCode.Joystick2Button5;
-                _options = KeyCode.Joystick2Button6;
-                _start = KeyCode.Joystick2Button7;
+                _gamepadBottom = KeyCode.Alpha6;
+                _gamepadRight = KeyCode.R;
+                _gamepadLeft = KeyCode.Y;
+                _gamepadTop = KeyCode.V;
+                _leftBumper = KeyCode.B;
+                _rightBumper = KeyCode.N;
+                _options = KeyCode.Alpha4;
+                _start = KeyCode.Alpha5;
+                _left = KeyCode.F;
+                _right = KeyCode.H;
+                _up = KeyCode.T;
+                _down = KeyCode.G;
                 break;
             case 3:
-                _gamepadBottom = KeyCode.Joystick3Button0;
-                _gamepadRight = KeyCode.Joystick3Button1;
-                _gamepadLeft = KeyCode.Joystick3Button2;
-                _gamepadTop = KeyCode.Joystick3Button3;
-                _leftBumper = KeyCode.Joystick3Button4;
-                _rightBumper = KeyCode.Joystick3Button5;
-                _options = KeyCode.Joystick3Button6;
-                _start = KeyCode.Joystick3Button7;
+                _gamepadBottom = KeyCode.C;
+                _gamepadRight = KeyCode.Y;
+                _gamepadLeft = KeyCode.I;
+                _gamepadTop = KeyCode.N;
+                _leftBumper = KeyCode.M;
+                _rightBumper = KeyCode.Comma;
+                _options = KeyCode.Alpha7;
+                _start = KeyCode.Alpha8;
+                _left = KeyCode.H;
+                _right = KeyCode.K;
+                _up = KeyCode.U;
+                _down = KeyCode.J;
                 break;
             case 4:
-                _gamepadBottom = KeyCode.Joystick4Button0;
-                _gamepadRight = KeyCode.Joystick4Button1;
-                _gamepadLeft = KeyCode.Joystick4Button2;
-                _gamepadTop = KeyCode.Joystick4Button3;
-                _leftBumper = KeyCode.Joystick4Button4;
-                _rightBumper = KeyCode.Joystick4Button5;
-                _options = KeyCode.Joystick4Button6;
-                _start = KeyCode.Joystick4Button7;
+                _gamepadBottom = KeyCode.Z;
+                _gamepadRight = KeyCode.O;
+                _gamepadLeft = KeyCode.P;
+                _gamepadTop = KeyCode.L;
+                _leftBumper = KeyCode.Colon;
+                _rightBumper = KeyCode.Question;
+                _options = KeyCode.LeftBracket;
+                _start = KeyCode.RightBracket;
+                _left = KeyCode.LeftArrow;
+                _right = KeyCode.RightArrow;
+                _up = KeyCode.UpArrow;
+                _down = KeyCode.DownArrow;
                 break;
             default:
                 Debug.LogError("The player ID can only be from 1 to 4.");
@@ -89,35 +93,45 @@ public class ControllerMap
     }
 
     /// <summary>
-    /// Gets the X Axis value between -1 and 1.
+    /// Gets the X Axis from the keyboard.
     /// </summary>
-    public virtual float XAxis
+    public override float XAxis
     {
-        get { return Input.GetAxisRaw("Horizontal" + _playerId); }
+        get
+        {
+            if (Input.GetKey(_left)) return -1;
+            if (Input.GetKey(_right)) return 1;
+            return base.XAxis;
+        }
     }
 
     /// <summary>
-    /// Gets the X Axis value between -1 and 1.
+    /// Gets the Y Axis from the keyboard.
     /// </summary>
-    public virtual float YAxis
+    public override float YAxis
     {
-        get { return Input.GetAxisRaw("Vertical" + _playerId); }
+        get
+        {
+            if (Input.GetKey(_down)) return -1;
+            if (Input.GetKey(_up)) return 1;
+            return base.YAxis;
+        }
     }
 
     /// <summary>
-    /// Gets the left trigger axis value between 0 and 1.
+    /// Gets the left trigger axis from left key on the keyboard.
     /// </summary>
-    public virtual float LeftTrigger
+    public override float LeftTrigger
     {
-        get { return Input.GetAxisRaw("LeftTrigger" + _playerId); }
+        get { return Input.GetKey(_left) ? 1 : base.LeftTrigger; }
     }
 
     /// <summary>
-    /// Gets the right trigger axis value between 0 and 1.
+    /// Gets the right trigger axis from the right key on the keyboard.
     /// </summary>
-    public virtual float RightTrigger
+    public override float RightTrigger
     {
-        get { return Input.GetAxisRaw("RightTrigger" + _playerId); }
+        get { return Input.GetKey(_right) ? 1 : base.RightTrigger; }
     }
 
     /// <summary>
@@ -125,8 +139,11 @@ public class ControllerMap
     /// </summary>
     /// <param name="button">The button to check.</param>
     /// <returns>True if the button was pressed, false if not.</returns>
-    public virtual bool GetButton(Button button)
+    public override bool GetButton(Button button)
     {
+        var isPressed = base.GetButton(button);
+        if (isPressed) return true;
+
         switch (button)
         {
             case Button.GamepadBottom: return Input.GetKey(_gamepadBottom);
@@ -146,8 +163,11 @@ public class ControllerMap
     /// </summary>
     /// <param name="button">The button to check.</param>
     /// <returns>True is the button was pressed in this frame, false if not.</returns>
-    public virtual bool GetButtonDown(Button button)
+    public override bool GetButtonDown(Button button)
     {
+        var isPressed = base.GetButtonDown(button);
+        if (isPressed) return true;
+
         switch (button)
         {
             case Button.GamepadBottom: return Input.GetKeyDown(_gamepadBottom);
@@ -167,8 +187,11 @@ public class ControllerMap
     /// </summary>
     /// <param name="button">The button to check</param>
     /// <returns>True if the button was released, false if not.</returns>
-    public virtual bool GetButtonUp(Button button)
+    public override bool GetButtonUp(Button button)
     {
+        var isPressed = base.GetButtonUp(button);
+        if (isPressed) return true;
+
         switch (button)
         {
             case Button.GamepadBottom: return Input.GetKeyUp(_gamepadBottom);

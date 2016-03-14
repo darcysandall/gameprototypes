@@ -4,17 +4,17 @@ using System.Collections.Generic;
 
 public class ControllerManager
 {
-    private readonly Dictionary<int, ControllerMap> _controllers;
+    private readonly Dictionary<int, KeyboardMap> _controllers;
     private static ControllerManager _controllerManager;
 
     public ControllerManager()
     {
-        _controllers = new Dictionary<int, ControllerMap>();
+        _controllers = new Dictionary<int, KeyboardMap>();
     }
 
     public void AddController(int playerId)
     {
-        _controllers[playerId] = new ControllerMap(playerId);
+        _controllers[playerId] = new KeyboardMap(playerId);
     }
 
     public ControllerMap GetController(int playerId)
