@@ -88,21 +88,33 @@ public class ControllerMap
         }
     }
 
+    /// <summary>
+    /// Gets the X Axis value between -1 and 1.
+    /// </summary>
     public float XAxis
     {
         get { return Input.GetAxisRaw("Horizontal" + _playerId); }
     }
 
+    /// <summary>
+    /// Gets the X Axis value between -1 and 1.
+    /// </summary>
     public float YAxis
     {
         get { return Input.GetAxisRaw("Vertical" + _playerId); }
     }
 
+    /// <summary>
+    /// Gets the left trigger axis value between 0 and 1.
+    /// </summary>
     public float LeftTrigger
     {
         get { return Input.GetAxisRaw("LeftTrigger" + _playerId); }
     }
 
+    /// <summary>
+    /// Gets the right trigger axis value between 0 and 1.
+    /// </summary>
     public float RightTrigger
     {
         get { return Input.GetAxisRaw("RightTrigger" + _playerId); }
