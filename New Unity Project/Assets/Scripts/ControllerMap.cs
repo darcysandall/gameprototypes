@@ -82,8 +82,48 @@ public class ControllerMap
                 _options = KeyCode.Joystick4Button6;
                 _start = KeyCode.Joystick4Button7;
                 break;
+            case 5:
+                _gamepadBottom = KeyCode.Joystick5Button0;
+                _gamepadRight = KeyCode.Joystick5Button1;
+                _gamepadLeft = KeyCode.Joystick5Button2;
+                _gamepadTop = KeyCode.Joystick5Button3;
+                _leftBumper = KeyCode.Joystick5Button4;
+                _rightBumper = KeyCode.Joystick5Button5;
+                _options = KeyCode.Joystick5Button6;
+                _start = KeyCode.Joystick5Button7;
+                break;
+            case 6:
+                _gamepadBottom = KeyCode.Joystick6Button0;
+                _gamepadRight = KeyCode.Joystick6Button1;
+                _gamepadLeft = KeyCode.Joystick6Button2;
+                _gamepadTop = KeyCode.Joystick6Button3;
+                _leftBumper = KeyCode.Joystick6Button4;
+                _rightBumper = KeyCode.Joystick6Button5;
+                _options = KeyCode.Joystick6Button6;
+                _start = KeyCode.Joystick6Button7;
+                break;
+            case 7:
+                _gamepadBottom = KeyCode.Joystick7Button0;
+                _gamepadRight = KeyCode.Joystick7Button1;
+                _gamepadLeft = KeyCode.Joystick7Button2;
+                _gamepadTop = KeyCode.Joystick7Button3;
+                _leftBumper = KeyCode.Joystick7Button4;
+                _rightBumper = KeyCode.Joystick7Button5;
+                _options = KeyCode.Joystick7Button6;
+                _start = KeyCode.Joystick7Button7;
+                break;
+            case 8:
+                _gamepadBottom = KeyCode.Joystick8Button0;
+                _gamepadRight = KeyCode.Joystick8Button1;
+                _gamepadLeft = KeyCode.Joystick8Button2;
+                _gamepadTop = KeyCode.Joystick8Button3;
+                _leftBumper = KeyCode.Joystick8Button4;
+                _rightBumper = KeyCode.Joystick8Button5;
+                _options = KeyCode.Joystick8Button6;
+                _start = KeyCode.Joystick8Button7;
+                break;
             default:
-                Debug.LogError("The player ID can only be from 1 to 4.");
+                Debug.LogError("The player ID can only be from 1 to 8.");
                 break;
         }
     }
