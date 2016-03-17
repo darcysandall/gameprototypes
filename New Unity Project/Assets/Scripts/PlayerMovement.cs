@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         _screenRight = _screenSpace * Vector3.right;
 
         var horizontal = _controller.XAxis;
-        var vertical = _controller.YAxis;
+        var vertical = -_controller.YAxis;
 
         _direction = (_screenForward * vertical) + (_screenRight * horizontal);
         _moveDirection = transform.position + _direction;
