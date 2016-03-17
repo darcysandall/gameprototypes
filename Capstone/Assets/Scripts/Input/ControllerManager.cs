@@ -6,6 +6,8 @@ using System.Linq;
 /// 
 /// Manages all of the contollers for the players in the game.
 /// To create a Controller Manager call the static Controller getter.
+/// 
+/// To support keyboard input, change all references to ControllerMap in this class to KeyBoardMap.
 /// </summary>
 public class ControllerManager
 {
