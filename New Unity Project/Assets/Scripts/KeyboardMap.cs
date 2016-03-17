@@ -31,6 +31,7 @@ public class KeyboardMap : ControllerMap
         switch (playerId)
         {
             case 1:
+            case 5:
                 _gamepadBottom = KeyCode.Space;
                 _gamepadRight = KeyCode.Q;
                 _gamepadLeft = KeyCode.E;
@@ -45,6 +46,7 @@ public class KeyboardMap : ControllerMap
                 _down = KeyCode.S;
                 break;
             case 2:
+            case 6:
                 _gamepadBottom = KeyCode.Alpha6;
                 _gamepadRight = KeyCode.R;
                 _gamepadLeft = KeyCode.Y;
@@ -59,6 +61,7 @@ public class KeyboardMap : ControllerMap
                 _down = KeyCode.G;
                 break;
             case 3:
+            case 7:
                 _gamepadBottom = KeyCode.C;
                 _gamepadRight = KeyCode.Y;
                 _gamepadLeft = KeyCode.I;
@@ -73,6 +76,7 @@ public class KeyboardMap : ControllerMap
                 _down = KeyCode.J;
                 break;
             case 4:
+            case 8:
                 _gamepadBottom = KeyCode.Z;
                 _gamepadRight = KeyCode.O;
                 _gamepadLeft = KeyCode.P;
@@ -87,7 +91,7 @@ public class KeyboardMap : ControllerMap
                 _down = KeyCode.DownArrow;
                 break;
             default:
-                Debug.LogError("The player ID can only be from 1 to 4.");
+                Debug.LogError("The player ID can only be from 1 to 8.");
                 break;
         }
     }
