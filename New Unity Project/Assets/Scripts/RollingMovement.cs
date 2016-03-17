@@ -8,24 +8,23 @@ public class RollingMovement : MonoBehaviour
     public float Force = 5;
 
     private Movement _movement;
+    private ControllerMap _controller;
 
     void Start()
     {
         _movement = GetComponent<Movement>();
+        ControllerManager.Controllers.AddController(PlayerId);
+        _controller = ControllerManager.Controllers.GetController(PlayerId);
     }
 
     void Update()
     {
+        Debug.Log(_controller.XAxis);
         // If the controller is getting horiontal input then move the player
-        if (Input.GetAxisRaw(ConvertControl("Horizontal")) != 0)
+        if (_controller.XAxis != 0)
         {
-            var horizontal = Input.GetAxisRaw(ConvertControl("Horizontal")) * Force;
+            var horizontal = _controller.XAxis * Force;
             _movement.Rigidbody.AddRelativeForce(horizontal, 0, 0, ForceMode.Impulse);
         }
-    }
-
-    private string ConvertControl(string control)
-    {
-        return string.Format("{0}{1}", control, PlayerId);
     }
 }

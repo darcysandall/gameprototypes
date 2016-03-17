@@ -90,9 +90,4 @@ public class PlayerMovement : MonoBehaviour
         _movement.Rigidbody.velocity = new Vector3(velocity.x, 0, velocity.z);
         _movement.Rigidbody.AddRelativeForce(jumpVelocity, ForceMode.Impulse);
     }
-
-    private string ConvertControl(string control)
-    {
-        return String.Format("{0}{1}", control, PlayerId);
-    }
 }

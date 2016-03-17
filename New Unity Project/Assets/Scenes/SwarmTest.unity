@@ -3890,7 +3890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 2
+  PlayerId: 6
   Acceleration: 10
   Deceleration: 2
   MaxSpeed: 8
@@ -4135,7 +4135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 4
+  PlayerId: 8
   Acceleration: 10
   Deceleration: 2
   MaxSpeed: 8
@@ -4588,7 +4588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 1
+  PlayerId: 5
   Acceleration: 10
   Deceleration: 2
   MaxSpeed: 8
@@ -5636,7 +5636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ddc979e7decea4cbf4fa055392a052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 3
+  PlayerId: 7
   Acceleration: 10
   Deceleration: 2
   MaxSpeed: 8
