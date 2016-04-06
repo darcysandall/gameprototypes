@@ -2,10 +2,17 @@ approve_by_comment: true
 approve_regex: ^Approved
 reject_regex: ^Rejected
 reset_on_push: false
+author_approval: ignored
 reviewers:
-  members:
-  - benhayesuni
-  - darcysandall
-  - fordkilleenuni
   name: default
   required: 1
+  members:
+  - andrewspalato
+  - benhayesuni
+  - chrisslive95
+  - darcysandall
+  - fordkilleenuni
+  - MisterWolfen
+  - Scyfon
+  - sparcellbrooke
+  
