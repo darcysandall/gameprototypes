@@ -4,18 +4,14 @@ reject_regex: ^Rejected
 reset_on_push: false
 author_approval: ignored
 reviewers:
-  name: programmers
-  required: 1
-  members:
-  - benhayesuni
-  - darcysandall
-  - fordkilleenuni
-  
-  name: designers
+  name: default
   required: 1
   members:
   - andrewspalato
+  - benhayesuni
   - chrisslive95
+  - darcysandall
+  - fordkilleenuni
   - MisterWolfen
   - Scyfon
   - sparcellbrooke
